@@ -305,5 +305,8 @@ The Human-in-the-Loop architecture remains unchanged.
 
 # License
 
-This project is released under the MIT License.
+Copyright © 2026 luisfortegha
+
+Licensed under the Apache License, Version 2.0.
+
 See the LICENSE file for details.
