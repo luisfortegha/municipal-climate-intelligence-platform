@@ -6,6 +6,11 @@ authors:
   - family-names: "Ortega Hanco"
     given-names: "Luis Fernando"
 
+abstract: >
+  A Human-in-the-Loop decision support platform for municipal environmental
+  and infrastructure assessment using deterministic engineering analysis,
+  Earth observation, GIS, and AI-assisted reporting.
+
 repository-code: https://github.com/luisfortegha/municipal-climate-intelligence-platform
 
 version: "1.0.0"
