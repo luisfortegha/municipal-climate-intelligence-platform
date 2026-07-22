@@ -52,16 +52,31 @@ Hydrology Proximity
 """
         )
 
+    forecast = engineering.get("forecast_rainfall_mm")
+    rainfall72 = engineering.get("accumulation_72h_mm")
+
+    forecast_text = (
+        f"{forecast:.1f} mm"
+        if isinstance(forecast, (int, float))
+        else "--"
+    )
+
+    rainfall72_text = (
+        f"{rainfall72:.1f} mm"
+        if isinstance(rainfall72, (int, float))
+        else "--"
+    )
+
     st.success(
         f"""
-Engineering Summary
-
-• Review Assets: {engineering.get("affected_assets", 0)}
-
-• Critical Facilities: {engineering.get("critical_facilities", 0)}
-
-• Forecast Rainfall: {engineering.get("forecast_rainfall_mm", "--"):.1f} mm
-
-• 72-hour Rainfall: {engineering.get("accumulation_72h_mm", "--"):.1f} mm
-"""
+    Engineering Summary
+    
+    • Review Assets: {engineering.get("affected_assets", 0)}
+    
+    • Critical Facilities: {engineering.get("critical_facilities", 0)}
+        
+    • Forecast Rainfall: {forecast_text}
+    
+    • 72-hour Rainfall: {rainfall72_text}
+    """
     )
