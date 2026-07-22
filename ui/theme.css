@@ -1,0 +1,676 @@
+    /* ==========================================
+       GLOBAL TEXT COLORS
+    ========================================== */
+
+    html,
+    body,
+    p,
+    span,
+    label,
+    small,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+        color:#E2E8F0 !important;
+    }
+
+    .stMarkdown,
+    .stMarkdown p,
+    .stMarkdown span{
+        color:#E2E8F0 !important;
+    }
+
+    .stCaption,
+    small{
+
+        color:#93C5FD !important;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+    /* -------------------------------------------------- */
+    /* Global */
+    /* -------------------------------------------------- */
+
+    html,
+    body,
+    .stApp{
+
+        font-family:'Outfit',sans-serif;
+    
+        background:#0F172A;
+    
+        color:#F8FAFC;
+    }
+
+    /* ==========================================
+       Municipality Selector (Intentional Light)
+    ========================================== */
+    
+    .st-key-municipality_selector [data-baseweb="select"] > div{
+
+        background:#FFFFFF !important;
+
+        border:1px solid #64748B !important;
+
+        border-radius:10px !important;
+    }
+
+    .st-key-municipality_selector [data-baseweb="select"] *{
+    
+        color:#111827 !important;
+    }
+
+    .st-key-municipality_selector input{
+    
+        color:#111827 !important;
+    
+        background:#FFFFFF !important;
+    }
+
+    .st-key-municipality_selector svg{
+    
+        fill:#64748B !important;
+    }
+
+    /* -------------------------------------------------- */
+    /* Sidebar */
+    /* -------------------------------------------------- */
+
+    section[data-testid="stSidebar"]{
+
+        background:#0B1220;
+    
+        border-right:1px solid #334155;
+
+        width:320px !important;
+
+        min-width:320px !important;
+    }
+    
+    section[data-testid="stSidebar"] *{
+
+        color:#F8FAFC;
+    }
+    
+    /* -------------------------------------------------- */
+    /* Headers */
+    /* -------------------------------------------------- */
+    
+    .title-text{
+    
+        font-size:2.7rem;
+    
+        font-weight:700;
+
+        color:white;
+
+        -webkit-text-fill-color:white;
+
+        background:none;
+    }
+
+    .subtitle-text{
+
+        color:#CBD5E1;
+    }
+    
+    .card-header{
+    
+        font-size:20px;
+    
+        font-weight:700;
+    
+        color:white;
+    
+        letter-spacing:.3px;
+    
+        border-bottom:2px solid #334155;
+    
+        padding-bottom:10px;
+    
+        margin-bottom:16px;
+    }
+
+    /* =====================================
+       METRIC CARDS
+    ===================================== */
+    
+    div[data-testid="metric-container"]{
+    
+        background:#1E293B !important;
+    
+        border:1px solid #334155 !important;
+    
+        border-radius:12px;
+    
+        padding:18px;
+        
+        box-shadow:0 2px 10px rgba(0,0,0,.25);
+    }
+
+    div[data-testid="metric-container"] label{
+    
+        color:#93C5FD !important;
+    
+        font-size:13px !important;
+    
+        font-weight:600 !important;
+    }
+
+    div[data-testid="stMetricValue"]{
+    
+        color:#F8FAFC !important;
+    
+        font-size:18px !important;
+
+        font-weight:600 !important;
+
+        line-height:1.2 !important;
+    }
+
+    div[data-testid="metric-container"] [data-testid="stMetricDelta"]{
+    
+        color:#CBD5E1 !important;
+    }
+
+    /* -------------------------------------------------- */
+    /* Expanders */
+    /* -------------------------------------------------- */
+
+    details{
+
+        background:#172033;
+    
+        border:1px solid #334155;
+    
+        border-radius:12px;
+    
+        padding:8px;
+    
+        margin-bottom:14px;
+    }
+
+    /* -------------------------------------------------- */
+    /* DataFrames */
+    /* -------------------------------------------------- */
+
+    [data-testid="stDataFrame"]{
+    
+        background:#172033;
+    
+        border:1px solid #334155;
+    
+        border-radius:12px;
+    }
+
+    /* -------------------------------------------------- */
+    /* Inputs */
+    /* -------------------------------------------------- */
+
+    .stTextInput input,
+    .stNumberInput input,
+    textarea{
+
+        background:#1F2937;
+    
+        color:white;
+    
+        border:1px solid #475569;
+
+        border-radius:8px;
+    }
+
+    /* -------------------------------------------------- */
+    /* Buttons */
+    /* -------------------------------------------------- */
+
+    .stButton > button{
+
+        width:100%;
+    
+        background:#2563EB;
+    
+        color:white;
+    
+        border:none;
+    
+        border-radius:10px;
+    
+        font-weight:600;
+    
+        transition:.2s;
+
+        height:44px;
+    }
+
+    button[kind="primary"]{
+    
+        background:#16A34A !important;
+    
+        color:white !important;
+    }
+
+    .stButton > button:hover{
+
+        background:#1D4ED8;
+    
+        color:white;
+    }
+
+    /* -------------------------------------------------- */
+    /* Success / Info */
+    /* -------------------------------------------------- */
+    
+    [data-testid="stAlert"]{
+
+        border-radius:10px;
+    }
+    
+    /* -------------------------------------------------- */
+    /* Tabs */
+    /* -------------------------------------------------- */
+
+    button[role="tab"]{
+    
+        color:#CBD5E1;
+    }
+
+    /* -------------------------------------------------- */
+    /* Horizontal Rules */
+    /* -------------------------------------------------- */
+
+    hr{
+    
+        border-color:#334155;
+    }
+
+    /* -------------------------------------------------- */
+    /* Footer */
+    /* -------------------------------------------------- */
+
+    .disclaimer{
+
+        color:#94A3B8;
+
+        border-top:1px solid #334155;
+    
+        padding-top:18px;
+    
+        margin-top:24px;
+    
+        text-align:center;
+    
+        font-size:.85rem;
+    }
+
+    /* Hide Streamlit sidebar controls */
+
+    [data-testid="collapsedControl"]{
+        display:none !important;
+    }
+
+    button[kind="header"]{
+        display:none !important;
+    }
+    
+    [data-testid="collapsedControl"]{
+        display:none !important;
+    }
+
+    .operation-title{
+
+        font-size:22px;
+    
+        font-weight:700;
+    
+        color:#F8FAFC;
+    
+        line-height:1.25;
+    
+        margin-bottom:10px;
+    }
+
+    /* ==========================================
+       REVIEW STATUS
+    ========================================== */
+    
+    .review-status{
+    
+        display:flex;
+    
+        align-items:center;
+    
+        gap:10px;
+    
+        margin-top:8px;
+    
+        margin-bottom:4px;
+    }
+
+    .review-icon{
+
+        font-size:20px;
+    }
+
+    .review-text{
+
+        font-size:20px;
+    
+        font-weight:600;
+    
+        color:#F8FAFC;
+    }
+
+    /* ==========================================
+       REVIEW COMMENTS
+    ========================================== */
+
+    textarea{
+
+        background:#1E293B !important;
+    
+        color:#E2E8F0 !important;
+    
+        border:1px solid #475569 !important;
+    
+        border-radius:8px !important;
+    }
+
+    textarea::placeholder{
+    
+        color:#94A3B8 !important;
+    
+        opacity:1 !important;
+    }
+
+    /* Selected municipality */
+
+    [data-baseweb="select"] div{
+        color:#F8FAFC !important;
+    }
+
+    [data-baseweb="select"] span{
+        color:#F8FAFC !important;
+    }
+
+    [data-baseweb="select"] input{
+        color:#F8FAFC !important;
+    }
+
+    /* ===== Selectbox dropdown ===== */
+
+    div[data-baseweb="popover"]{
+        background:#1E293B !important;
+    }
+
+    div[data-baseweb="menu"]{
+        background:#1E293B !important;
+    }
+
+    div[role="option"]{
+        background:#1E293B !important;
+        color:#F8FAFC !important;
+    }
+
+    div[role="option"]:hover{
+        background:#334155 !important;
+        color:#FFFFFF !important;
+    }
+
+    div[aria-selected="true"]{
+        background:#2563EB !important;
+        color:white !important;
+    }
+
+    /* ==========================================
+       BRIEF CARD
+    ========================================== */
+
+    .brief-card{
+    
+        background:#1E293B;
+    
+        border:1px solid #334155;
+    
+        border-radius:14px;
+    
+        padding:18px;
+    
+        margin-bottom:18px;
+    }
+
+    .brief-title{
+    
+        color:#F8FAFC;
+    
+        font-size:22px;
+    
+        font-weight:700;
+        
+        margin-bottom:10px;
+    }
+
+    .brief-description{
+    
+        color:#CBD5E1;
+        
+        line-height:1.5;
+
+        font-size:14px;
+    }
+
+    /* ==========================================
+       Streamlit Widget Color Override
+    ========================================== */
+    
+    [data-testid="stMarkdownContainer"],
+    [data-testid="stMetric"],
+    [data-testid="stMetricValue"],
+    [data-testid="stMetricLabel"],
+    [data-testid="stAlert"],
+    [data-baseweb="select"],
+    [data-baseweb="select"] *,
+    button,
+    button *,
+    summary,
+    summary *,
+    details,
+    details *{
+
+        color:#E2E8F0 !important;
+    }
+
+    [data-baseweb="popover"]{
+
+        background:#1E293B !important;
+    }
+    
+    [data-baseweb="menu"]{
+
+        background:#1E293B !important;
+    }
+
+    /* ==========================================
+       Expanders (Streamlit 1.59)
+    ========================================== */
+
+    details{
+
+        background:#1E293B !important;
+    
+        border:1px solid #334155 !important;
+    
+        border-radius:10px !important;
+    
+        overflow:hidden;
+    }
+
+    details summary{
+
+        background:#1E293B !important;
+    
+        color:#F8FAFC !important;
+    
+        padding:12px 16px !important;
+    
+        font-weight:600 !important;
+    }
+
+    details summary *{
+
+        color:#F8FAFC !important;
+    }
+
+    /* Export button */
+
+    button[kind="secondary"]{
+
+        background:#1E293B !important;
+    
+        color:#F8FAFC !important;
+    
+        border:1px solid #334155 !important;
+    
+        border-radius:10px !important;
+    }
+
+    button[kind="secondary"]:hover{
+
+        background:#2563EB !important;
+    
+        color:white !important;
+    }
+
+    /* ==========================================
+       STREAMLIT DIALOG
+    ========================================== */
+    
+    [data-testid="stDialog"]{
+
+        transition:all .35s ease;
+    }
+
+    /* Titles */
+
+    [data-testid="stDialog"] h1,
+    [data-testid="stDialog"] h2,
+    [data-testid="stDialog"] h3{
+
+        color:#111827 !important;
+    
+        transition:color .35s ease;
+    }
+    
+    /* Body */
+    
+    [data-testid="stDialog"] p,
+    [data-testid="stDialog"] li,
+    [data-testid="stDialog"] span{
+    
+        color:#374151 !important;
+    
+        transition:color .35s ease;
+    }
+    
+    /* Divider */
+    
+    [data-testid="stDialog"] hr{
+    
+        border-color:#D1D5DB !important;
+    }
+    
+    /* Close button */
+    
+    [data-testid="stDialog"] button[kind="secondary"]{
+    
+        color:#374151 !important;
+    }        
+
+    .did-you-know{
+    
+        background:#F3F4F6;
+    
+        border:1px solid #CBD5E1;
+    
+        border-radius:12px;
+    
+        padding:20px;
+    }
+    
+    .did-you-know-title{
+    
+        font-size:20px;
+    
+        font-weight:700;
+    
+        color:#111827;
+    
+        margin-bottom:14px;
+    }
+    
+    .did-you-know-body{
+    
+        font-size:18px;
+    
+        line-height:1.7;
+
+        color:#374151;
+    }
+
+    .progress-bar{
+
+        width:100%;
+    
+        height:12px;
+    
+        background:#E5E7EB;
+    
+        border-radius:20px;
+    
+        overflow:hidden;
+    
+        margin:20px 0;
+    }
+
+    .progress-fill{
+    
+        height:100%;
+    
+        width:35%;
+    
+        background:linear-gradient(
+            90deg,
+            #2563EB,
+            #60A5FA,
+            #2563EB
+        );
+    
+        background-size:300% 100%;
+    
+        animation:loading 2s linear infinite;
+    }
+    
+    @keyframes loading{
+    
+        0%{
+            background-position:0% 50%;
+        }
+    
+        100%{
+            background-position:100% 50%;
+        }
+    
+    }      
+
+    [data-testid="stToast"] p,
+    [data-testid="stToast"] span,
+    [data-testid="stToast"] div{
+    
+        color:#000 !important;
+    
+    }  

@@ -1,0 +1,56 @@
+# Git
+.git
+.github
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/
+
+# Environment
+.env
+.env.*
+
+# Local databases
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# Build artifacts
+build/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.cache/
+
+# Docker
+Dockerfile.dev
+docker-compose.yml
+
+# Misc
+.gemini/
