@@ -20,6 +20,16 @@ Provide municipal emergency managers with evidence-based infrastructure intellig
 
 ---
 
+## Live Demo
+
+A live demonstration of the platform is available via Streamlit Community Cloud.
+
+**Live Application**
+
+https://municipal-climate-intelligence-platform.streamlit.app/
+
+---
+
 # Architecture
 
 ```
@@ -164,7 +174,7 @@ AI-generated engineering summaries are derived exclusively from deterministic fi
 # Repository
 
 ```
-municipal_climate_agent/
+municipal-climate-intelligence-platform/
 
 analysis/
 earth_observation/
@@ -189,6 +199,9 @@ Dockerfile
 - Folium
 - OpenWeather API
 - NASA GPM
+- NASA Earthdata
+- Sentinel-2 (Microsoft Planetary Computer)
+- Copernicus DEM
 - Google Gemini
 - SQLite
 - Docker
@@ -198,15 +211,23 @@ Dockerfile
 
 # Environment Variables
 
-Create a `.env` file.
+Create a `.env` file (or configure the equivalent environment variables in your deployment platform).
 
-```
+The following secrets are required:
+
+```text
 OPENWEATHER_API_KEY=
-
 GEMINI_API_KEY=
+EARTHDATA_USERNAME=
+EARTHDATA_PASSWORD=
 
 GEMINI_MODEL=gemini-2.5-flash
 ```
+
+> **Note**
+>
+> API keys and credentials are **not included** in this repository.
+> They must be obtained from their respective providers and configured locally or through your deployment platform (for example, Streamlit Community Cloud or Google Cloud Run).
 
 ---
 
@@ -312,6 +333,16 @@ The submission demonstrates:
 - Multi-event analytics
 
 The Human-in-the-Loop architecture remains unchanged.
+
+# Citation
+
+If this software contributes to research, publications, public reports, or derivative software, please cite the original repository.
+
+**Repository**
+
+https://github.com/luisfortegha/municipal-climate-intelligence-platform
+
+A GitHub citation file (`CITATION.cff`) is included to support standard citation formats.
 
 # License
 
