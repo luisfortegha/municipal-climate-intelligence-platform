@@ -143,13 +143,23 @@ The AI only communicates engineering evidence.
 
 ![Operations Dashboard](docs/images/dashboard.png)
 
+The main operational interface provides an integrated view of environmental conditions, infrastructure assessment, and municipal engineering intelligence.
+
+---
+
 ## Earth Observation Center
 
-![Earth Observation](docs/images/earth_center.png)
+![Earth Observation](docs/images/earth_observation.png)
+
+Earth observation integrates NASA GPM precipitation, Sentinel-2 surface water assessment, and Copernicus DEM terrain analysis into deterministic engineering evidence.
+
+---
 
 ## Infrastructure Review Brief
 
-![Review Brief](docs/images/brief.png)
+![Infrastructure Review Brief](docs/images/review_brief.png)
+
+AI-generated engineering summaries are derived exclusively from deterministic findings and require explicit human review before operational use.
 
 # Repository
 
