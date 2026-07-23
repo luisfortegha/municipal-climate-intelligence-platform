@@ -193,7 +193,7 @@ def registry_statistics(
             "recurring_zones": 0,
             "average_rainfall": 0.0,
             "average_hazard_polygons": 0,
-            "average_affected_assets": 0,
+            "average_engineering_review_assets": 0,
             "most_common_flood_condition": "--",
         }
 
@@ -202,7 +202,7 @@ def registry_statistics(
     zone_counter = {}
     rainfall = []
     hazard_counts = []
-    affected_assets = []
+    engineering_review_assets = []
     
     for report in reports:
 
@@ -259,9 +259,9 @@ def registry_statistics(
         if rain is not None:
             rainfall.append(rain)
     
-        hazard_counts.append(
+        engineering_review_assets.append(
             engineering.get(
-                "hazard_polygons",
+                "affected_assets",
                 0,
             )
         )
@@ -309,12 +309,17 @@ def registry_statistics(
                 flood_conditions,
                 key=flood_conditions.get,
             ) if flood_conditions else "--",
+    
         "previous_events": len(reports),
+    
         "recurring_assets": recurring_assets,
+    
         "recurring_zones": recurring_zones,
+    
         "average_rainfall": average_rainfall,
-        "average_hazard_polygons": average_hazard_polygons,
-        "average_affected_assets": average_affected_assets,
+    
+        "average_engineering_review_assets":
+            average_engineering_review_assets,
     }
 
 def export_reports_json(
@@ -372,7 +377,7 @@ def export_reports_csv(
                 "Study Area",
                 "Forecast Rainfall",
                 "Observed Rainfall",
-                "Affected Assets",
+                "Engineering Review Assets",
                 "Flood Condition",
             ]
         )
@@ -422,5 +427,26 @@ def export_reports_csv(
                     )
                 ]
             )
+
+        # --------------------------------------------------------
+        # Registry Statistics
+        # --------------------------------------------------------
+    
+        recurring_assets = len(asset_counter)
+
+        recurring_zones = len(zone_counter)
+
+        average_rainfall = (
+            sum(rainfall) / len(rainfall)
+            if rainfall
+            else 0.0
+        )
+
+        average_engineering_review_assets = (
+            sum(engineering_review_assets)
+            / len(engineering_review_assets)
+            if engineering_review_assets
+            else 0.0
+        )
 
     return output_path

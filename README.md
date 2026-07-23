@@ -1,5 +1,7 @@
 # Municipal Climate Intelligence Platform
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21509905.svg)](https://doi.org/10.5281/zenodo.21509905)
+
 Municipal Climate Intelligence Platform is an open-source Human-in-the-Loop decision support system for municipal infrastructure and environmental assessment.
 
 The platform combines weather observations, satellite Earth observation, terrain analysis, geospatial infrastructure data, deterministic engineering workflows, and AI-generated engineering summaries into a single operational dashboard.
@@ -334,9 +336,13 @@ The submission demonstrates:
 
 The Human-in-the-Loop architecture remains unchanged.
 
-# Citation
+## Citation
 
-If this software contributes to research, publications, public reports, or derivative software, please cite the original repository.
+If you use this software in research, publications, or municipal engineering practice, please cite the archived release:
+
+Ortega Hanco, L. F. (2026). Municipal Climate Intelligence Platform (Version v1.0.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21509905
+
+GitHub also provides a machine-readable citation via the included `CITATION.cff` file.
 
 **Repository**
 

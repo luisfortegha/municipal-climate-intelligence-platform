@@ -622,71 +622,27 @@ def analyze_affected_infrastructure(
     }
 
     summary = {
-        "schools": 0,
-        "hospitals": 0,
-        "fire_stations": 0,
-        "police": 0,
-        "emergency_services": 0,
-        "city_halls": 0,
-        "public_works": 0,
-        "water_treatment": 0,
-        "wastewater_treatment": 0,
-        "waterways": 0,
-        "water": 0,
-        "power_substations": 0,
-        "roads": 0,
-        "total_assets": len(affected_assets),
+
+        "schools": len(infra_gdfs.get("schools", [])),
+        "hospitals": len(infra_gdfs.get("hospitals", [])),
+        "fire_stations": len(infra_gdfs.get("fire_stations", [])),
+        "police": len(infra_gdfs.get("police", [])),
+        "emergency_services": len(infra_gdfs.get("emergency_services", [])),
+        "city_halls": len(infra_gdfs.get("city_halls", [])),
+        "public_works": len(infra_gdfs.get("public_works", [])),
+        "water_treatment": len(infra_gdfs.get("water_treatment", [])),
+        "wastewater_treatment": len(infra_gdfs.get("wastewater_treatment", [])),
+        "waterways": len(infra_gdfs.get("waterways", [])),
+        "water": len(infra_gdfs.get("water", [])),
+        "power_substations": len(infra_gdfs.get("power_substations", [])),
+        "roads": len(infra_gdfs.get("primary_roads", [])),
+
+        "total_assets": sum(
+            len(gdf)
+            for gdf in infra_gdfs.values()
+            if gdf is not None
+        ),
     }
-
-    for asset in affected_assets:
-
-        layer = asset["osm_layer"]
-
-        if layer == "schools":
-            summary["schools"] += 1
-
-        elif layer == "hospitals":
-            summary["hospitals"] += 1
-
-        elif layer == "fire_stations":
-            summary["fire_stations"] += 1
-
-        elif layer == "police":
-            summary["police"] += 1
-
-        elif layer == "emergency_services":
-            summary["emergency_services"] += 1
-
-        elif layer == "primary_roads":
-            summary["roads"] += 1
-
-        elif layer == "city_halls":
-
-            summary["city_halls"] += 1
-        
-        elif layer == "public_works":
-
-            summary["public_works"] += 1
-
-        elif layer == "water_treatment":
-        
-            summary["water_treatment"] += 1
-        
-        elif layer == "wastewater_treatment":
-        
-            summary["wastewater_treatment"] += 1
-        
-        elif layer == "waterways":
-        
-            summary["waterways"] += 1
-        
-        elif layer == "water":
-        
-            summary["water"] += 1
-
-        elif layer == "power_substations":
-
-            summary["power_substations"] += 1
 
     logger.info("===== Affected Infrastructure =====")
 

@@ -13,6 +13,8 @@ abstract: >
 
 repository-code: https://github.com/luisfortegha/municipal-climate-intelligence-platform
 
+doi: 10.5281/zenodo.21509905
+
 version: "1.0.0"
 
 license: "Apache-2.0"
