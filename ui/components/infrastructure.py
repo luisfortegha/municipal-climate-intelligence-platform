@@ -7,7 +7,7 @@ def render_infrastructure(findings):
     st.markdown(
         """
         <div class="card-header">
-        🏗 Infrastructure Exposure
+        🏗 Infrastructure Inventory
         </div>
         """,
         unsafe_allow_html=True,
@@ -42,7 +42,7 @@ def render_infrastructure(findings):
     c1, c2, c3, c4 = st.columns(4)
 
     c1.metric(
-        "Affected Assets",
+        "Infrastructure Retrieved",
         summary.get(
             "total_assets",
             0,
@@ -71,6 +71,11 @@ def render_infrastructure(findings):
             "fire_stations",
             0,
         ),
+    )
+
+    st.caption(
+        "Infrastructure inventory retrieved from OpenStreetMap for the selected study area. "
+        "Engineering review assets are determined separately using environmental evidence."
     )
 
     with st.expander(
@@ -123,12 +128,14 @@ def render_infrastructure(findings):
     # Affected Assets
     # ---------------------------------------------------------
 
-    st.markdown("#### 🔴 Assets Intersecting Hazard Areas")
+    st.markdown(
+        "#### 🔴 Infrastructure Selected for Engineering Review"
+    )
 
     if not affected:
 
         st.success(
-            "No infrastructure intersects the mapped hazard areas."
+            "No infrastructure currently meets the engineering review criteria based on environmental evidence."
         )
 
     else:
@@ -169,7 +176,7 @@ def render_infrastructure(findings):
     # Nearby Assets
     # ---------------------------------------------------------
 
-    st.markdown("#### 🟡 Nearby Infrastructure")
+    st.markdown("#### 🟡 Supporting Infrastructure Context")
 
     if nearby:
 

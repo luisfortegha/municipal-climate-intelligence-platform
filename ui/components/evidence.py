@@ -201,34 +201,34 @@ def render_evidence(findings):
     # --------------------------------------------------------
 
     with st.expander(
-        "🏗 Infrastructure Exposure",
+        "🏗 Engineering Review",
         expanded=True,
     ):
 
         c1, c2, c3 = st.columns(3)
 
         c1.metric(
-            "Affected Assets",
+            "Engineering Review Assets",
             engineering.get(
                 "affected_assets",
                 0,
             ),
         )
-
+        
         c2.metric(
-            "Critical Facilities",
+            "Critical Facilities Reviewed",
             engineering.get(
                 "critical_facilities",
                 0,
             ),
         )
-
+        
         c3.metric(
-            "Review Assets",
-            engineering.get(
-                "affected_assets",
+            "Infrastructure Retrieved",
+            exposure.get(
+                "total_assets",
                 0,
-            )
+            ),
         )
 
         c1.metric(
@@ -318,7 +318,7 @@ def render_evidence(findings):
         )
 
         c2.metric(
-            "Critical Facilities",
+            "Critical Facilities Reviewed",
             engineering.get(
                 "critical_facilities",
                 0,
@@ -374,14 +374,6 @@ def render_evidence(findings):
         if flood:
 
             c1, c2 = st.columns(2)
-
-            c1.metric(
-                "Overall",
-                flood.get(
-                    "overall_condition",
-                    "--",
-                ),
-            )
 
             c2.metric(
                 "Rainfall",
@@ -448,7 +440,6 @@ def render_evidence(findings):
     ):
 
         st.success(
-            "No regulatory flood polygons are used in this platform.\n\n"
-            "Engineering review is based on observed rainfall, "
-            "surface water, terrain, waterways, and infrastructure."
+            "Engineering review is performed using multiple environmental evidence sources rather than regulatory flood polygons.\n\n"
+            "Evidence includes observed and forecast rainfall, surface water detection (NDWI), terrain analysis, proximity to waterways, and municipal infrastructure."
         )

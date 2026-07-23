@@ -7,6 +7,16 @@ def render_overview(
     analysis_mode,
 ):
 
+    st.info(
+        f"""
+    **Operational Assessment:**
+
+    The flood condition summarizes the current environmental assessment using
+    rainfall observations and forecasts, surface water detection, terrain,
+    waterway proximity, and municipal infrastructure analysis.
+    """
+    )
+
     st.markdown(
         """
         <div class="card-header">
@@ -53,6 +63,13 @@ def render_overview(
         {},
     )
 
+    st.markdown("---")
+
+    condition = flood.get(
+        "overall_condition",
+        "Unknown",
+    )
+
     c1, c2, c3 = st.columns(3)
 
     with c1:
@@ -86,7 +103,7 @@ def render_overview(
         )
 
         st.metric(
-            "Critical Assets",
+            "Critical Facilities Reviewed",
             engineering.get(
                 "critical_facilities",
                 0,
@@ -94,9 +111,9 @@ def render_overview(
         )
 
         st.metric(
-            "Affected Assets",
-            engineering.get(
-                "affected_assets",
+            "Infrastructure Retrieved",
+            exposure.get(
+                "total_assets",
                 0,
             ),
         )

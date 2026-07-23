@@ -25,6 +25,11 @@ def render_insights(findings):
         {},
     )
 
+    flood = findings.get(
+        "flood_assessment",
+        {},
+    )
+
     assets = findings.get(
         "affected_infrastructure",
         [],
@@ -48,7 +53,7 @@ def render_insights(findings):
 
 **Review Basis**
 
-Hydrology Proximity
+Environmental Evidence
 """
         )
 
@@ -71,12 +76,14 @@ Hydrology Proximity
         f"""
     Engineering Summary
     
-    • Review Assets: {engineering.get("affected_assets", 0)}
-    
-    • Critical Facilities: {engineering.get("critical_facilities", 0)}
-        
+    • Flood Condition: {flood.get("overall_condition", "--")}
+
+    • Engineering Review Assets: {engineering.get("affected_assets", 0)}
+
+    • Critical Facilities Reviewed: {engineering.get("critical_facilities", 0)}
+
     • Forecast Rainfall: {forecast_text}
-    
+
     • 72-hour Rainfall: {rainfall72_text}
     """
     )

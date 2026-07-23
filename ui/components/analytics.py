@@ -110,7 +110,7 @@ def render_analytics(findings):
     # Infrastructure Exposure
     # ----------------------------------------------------------
 
-    st.markdown("#### 🏗 Infrastructure Exposure")
+    st.markdown("#### 🏗 Engineering Review Summary")
 
     categories = [
         "Hospitals",
@@ -158,7 +158,7 @@ def render_analytics(findings):
     )
 
     ax.set_ylabel(
-        "Affected Assets",
+        "Engineering Review Assets",
     )
 
     ax.grid(

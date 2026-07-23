@@ -113,14 +113,6 @@ def build_pdf(
         ),
 
         (
-            "Environmental Assessment",
-            findings.get(
-                "environmental_assessment",
-                {},
-            ),
-        ),
-
-        (
             "Flood Assessment",
             findings.get(
                 "flood_assessment",
@@ -129,7 +121,7 @@ def build_pdf(
         ),
 
         (
-            "Infrastructure Assessment",
+            "Infrastructure Inventory",
             findings.get(
                 "summary",
                 {},
@@ -140,6 +132,14 @@ def build_pdf(
             "Exposure Assessment",
             findings.get(
                 "exposure_assessment",
+                {},
+            ),
+        ),
+
+        (
+            "Environmental Assessment",
+            findings.get(
+                "environmental_assessment",
                 {},
             ),
         ),
@@ -196,6 +196,46 @@ def build_pdf(
         )
     )
 
+    flood = findings.get(
+        "flood_assessment",
+        {},
+    )
+    
+    engineering = findings.get(
+        "engineering_assessment",
+        {},
+    )
+    
+    exposure = findings.get(
+        "exposure_assessment",
+        {},
+    )
+    
+    story.append(
+        Paragraph(
+            "<b>Executive Summary</b>",
+            styles["Heading2"],
+        )
+    )
+
+    story.append(
+        Paragraph(
+            f"""
+    <b>Flood Condition:</b> {display(flood.get("overall_condition"))}<br/>
+    <b>Infrastructure Retrieved:</b> {display(exposure.get("total_assets"))}<br/>
+    <b>Critical Facilities Reviewed:</b> {display(engineering.get("critical_facilities"))}
+    """,
+            styles["BodyText"],
+        )
+    )
+
+    story.append(
+        Spacer(
+            1,
+            18,
+        )
+    )
+
     story.append(
         Paragraph(
             "<b>Human Review</b>",
@@ -221,8 +261,11 @@ def build_pdf(
         Paragraph(
             "<font size=9 color='grey'>"
             "Municipal Climate Intelligence Platform is a Human-in-the-Loop "
-            "decision support platform. This report is intended to support "
-            "engineering review and does not replace professional judgment."
+            "engineering decision support platform. Flood assessments are "
+            "derived from environmental evidence including rainfall, surface "
+            "water detection, terrain analysis, waterway proximity, and "
+            "municipal infrastructure. This report supports engineering "
+            "review and does not replace professional judgment."
             "</font>",
             styles["BodyText"],
         )
